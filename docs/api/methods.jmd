@@ -311,6 +311,20 @@ A `resizeInfo` object, which will be passed to the supplied function, contains t
 
 ]) }}
 
+{{ api_method("getParams", "getParams (params[, id])", "Get the parameters for an upload request. Pass in a file id to make the parameters specific to that file.",
+[
+    {
+        "name": "params",
+        "type": "Object",
+        "description": "The parameters to include in the upload request."
+    },
+    {
+        "name": "id",
+        "type": "Integer",
+        "description": "The file id."
+    }
+], null) }}
+
 {{ api_method("getUuid", "getUuid (id)", "Returns the UUID of the item with the associated id.",
 [
     {
@@ -521,6 +535,20 @@ A `resizeInfo` object, which will be passed to your (optional) `customResizer` f
 ], null) }}
 
 {{ api_method("setParams", "setParams (params[, id])", "Set the parameters for an upload request. Pass in a file id to make the parameters specific to that file.",
+[
+    {
+        "name": "params",
+        "type": "Object",
+        "description": "The parameters to include in the upload request."
+    },
+    {
+        "name": "id",
+        "type": "Integer",
+        "description": "The file id."
+    }
+], null) }}
+
+{{ api_method("extendParams", "extendParams (params[, id])", "Extend the parameters for an upload request. Pass in a file id to make the parameters specific to that file.",
 [
     {
         "name": "params",
