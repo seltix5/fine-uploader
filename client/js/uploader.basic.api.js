@@ -270,6 +270,10 @@
             return this._uploadData.retrieve(optionalFilter);
         },
 
+        getParams: function(params, id) {
+            this._paramsStore.get(params, id);
+        },
+
         getUuid: function(id) {
             return this._uploadData.retrieve({id: id}).uuid;
         },
@@ -391,6 +395,10 @@
 
         setParams: function(params, id) {
             this._paramsStore.set(params, id);
+        },
+
+        extendParams: function(params, id) {
+            this._paramsStore.extend(params, id);
         },
 
         setUuid: function(id, newUuid) {
@@ -552,6 +560,19 @@
                     }
                     else {
                         store[id] = copy(val);
+                    }
+                },
+                
+                extend: function(val, id) {
+                    /*jshint eqeqeq: true, eqnull: true*/
+                    if (id == null) {
+                        store = {};
+                        catchall = catchall || {};
+                        qq.extend(catchall, val);
+                    }
+                    else {
+                        store[id] = store[id] || {};
+                        qq.extend(store[id], val);
                     }
                 },
 
