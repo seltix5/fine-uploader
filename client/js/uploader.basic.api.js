@@ -270,8 +270,8 @@
             return this._uploadData.retrieve(optionalFilter);
         },
 
-        getParams: function(params, id) {
-            this._paramsStore.get(params, id);
+        getParams: function(id) {
+            this._paramsStore.get(id);
         },
 
         getUuid: function(id) {
