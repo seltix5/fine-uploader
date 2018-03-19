@@ -271,7 +271,7 @@
         },
 
         getParams: function(id) {
-            this._paramsStore.get(id);
+            return this._paramsStore.get(id);
         },
 
         getUuid: function(id) {
