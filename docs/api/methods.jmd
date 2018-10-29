@@ -313,7 +313,7 @@ A `resizeInfo` object, which will be passed to the supplied function, contains t
 
 ]) }}
 
-{{ api_method("getParams", "getParams (params[, id])", "Get the parameters for an upload request. Pass in a file id to make the parameters specific to that file.",
+{{ api_method("getParams", "getParams (id)", "Get the parameters for an upload request. Pass in a file id to make the parameters specific to that file.",
 [
     {
         "name": "params",
